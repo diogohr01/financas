@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "finance-frontend",
+      "src": "frontend"
+    },
+    {
+      "name": "finance-backend",
+      "src": "backend"
+    }
+  ]
+}
