@@ -29,8 +29,8 @@ export class DashboardService {
     const categoriasArray = Object.entries(categorias).map(([categoria, total]) => ({ categoria, total }));
 
     const alertas = aiService.gerarAlertas(total_receitas, total_despesas, categoriasArray);
-    const resumo = { total_receitas, total_despesas, saldo, economia_mensal, alertas, sugestoes_investimento: [] };
-    resumo.sugestoes_investimento = aiService.gerarSugestoes(resumo);
+    const sugestoes_investimento = aiService.gerarSugestoes({ total_receitas, total_despesas, saldo, economia_mensal, alertas, sugestoes_investimento: [] });
+    const resumo = { total_receitas, total_despesas, saldo, economia_mensal, alertas, sugestoes_investimento };
 
     return resumo;
   }
